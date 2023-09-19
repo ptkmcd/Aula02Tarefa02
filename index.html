@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre o Maior Número</title>
+</head>
+<body>
+    <h1>Faça um programa JavaScript que receba 3 números informados pelo usuário e em seguida
+        apresente uma mensagem de alerta informando qual é o maior número dentre os números
+        informados.</h1>
+    <h2>Encontre o Maior Número</h2>
+    
+    <input type="number" id="numero1" placeholder="Digite o primeiro número">
+    <input type="number" id="numero2" placeholder="Digite o segundo número">
+    <input type="number" id="numero3" placeholder="Digite o terceiro número">
+    <button onclick="encontrarMaiorNumero()">Encontrar Maior Número</button>
+
+    <script>
+        function encontrarMaiorNumero() {
+            const numero1 = parseFloat(document.getElementById("numero1").value);
+            const numero2 = parseFloat(document.getElementById("numero2").value);
+            const numero3 = parseFloat(document.getElementById("numero3").value);
+
+            let maiorNumero;
+
+            if (numero1 >= numero2 && numero1 >= numero3) {
+                maiorNumero = numero1;
+            } else if (numero2 >= numero1 && numero2 >= numero3) {
+                maiorNumero = numero2;
+            } else {
+                maiorNumero = numero3;
+            }
+
+            alert(`O maior número entre ${numero1}, ${numero2} e ${numero3} é ${maiorNumero}`);
+        }
+    </script>
+</body>
+</html>
